@@ -1,0 +1,136 @@
+/* 1025px - 1240px */
+@media screen and (max-width: 1240px) {
+    .container {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .case-studies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experiments-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skills-section {
+        width: 300px;
+        padding: 1.75rem;
+    }
+
+    .profile-image {
+        width: 280px;
+        height: 340px;
+    }
+}
+
+/* 768px - 1024px */
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .skills-section {
+        width: 100%;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 300px;
+    }
+
+    .header-content {
+        flex: 1;
+    }
+
+    .name-section h1 {
+        font-size: 2rem;
+    }
+
+    .highlight {
+        font-size: 2.2rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* 478px - 767px */
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 0.75rem;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .case-studies {
+        grid-template-columns: 1fr;
+    }
+
+    .experiments-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 100%;
+        height: 380px;
+    }
+
+    .header-content {
+        align-self: stretch;
+    }
+
+    .name-section {
+        text-align: center;
+    }
+
+    .about-box {
+        text-align: center;
+    }
+
+    .description-box {
+        padding: 1.5rem;
+    }
+
+    .highlight {
+        font-size: 1.8rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .contact {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .contact h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+}

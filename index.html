@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunal-Creates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="precnnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="responsive.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            cursor: cell;
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -o-user-select: none; /* Opera */
+            user-select: none; /* Standard syntax */
+        }
+
+        body {
+            background-color: #0C0C0C;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 1.5rem;
+            height: 100vh;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3.0rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .nav-link {
+            background-color: #202020;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 1.4rem;
+            font-size: 1rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            line-height: normal;
+            letter-spacing: -0.02rem;
+            transition: border-color 0.3s ease;
+        }
+        .nav-link:hover {
+            outline: 1px solid #8a8a8a;
+        }
+
+        .section {
+            background-color: #202020;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.8rem;
+            transition: border-color 0.3s ease;
+        }
+        .section:hover {
+            outline: 1px solid #8a8a8a;
+        }
+        .section h2 {
+            font-weight: 600;
+            font-size: 19px;
+           
+        }
+        .section p {
+            font-size: 15px;
+            color: #e2e2e2;
+            
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0rem;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-info h1 {
+            font-weight: 700;
+            margin-bottom: 0.1rem;
+            font-size: 19px;
+        }
+
+        .profile-info p {
+            font-weight: 400;
+            color: #e2e2e2;
+            font-size: 14px;
+        }
+
+        .case-studies {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+
+        .case-study-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+        .experiments {
+            border: 1.8px dashed #575757;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: border-color 0.3s ease-in;
+        }
+
+        .experiments:hover {
+            border: 1.8px dashed #929292;
+        }
+
+        .experiments h2 {
+            font-size: 18px;
+        }
+        
+        .experiments p {
+            font-size: 15px;
+            color: #929292;
+        }
+
+        .experiments-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .experiment-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        .experiment-img:hover {
+            transform: scale(1.05);
+        }
+
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #202020;
+            border-radius: 1.4rem;
+            padding: 0.5rem 1.5rem;  
+            margin-top: 1.6rem;
+            height: 60px;
+            transition: border-color 0.3s ease-in;
+        }
+
+        .contact h2 {
+            font-weight: 600;
+            font-size: 18px;
+            margin-left: 25px;
+        }
+
+        .contact-button {
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 14px;
+            
+        }
+        .contact:hover {
+            outline: 1px solid #8a8a8a;
+        }
+        
+
+        .web-project {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        .web-project img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .project-link {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #000000;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 1.5rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+                height: auto;
+                overflow-y: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <nav class="nav-links">
+                <a href="#" target="_blank" class="nav-link">📄 řeșum̐e </a>
+                <a href="https://www.behance.net/kunalsingh221/projects" target="_blank" class="nav-link">🎨 Behance</a>
+                <a href="https://dribbble.com/Kunal-Creates" target="_blank" class="nav-link">🏀 Dribbble</a>
+                <a href="https://github.com/Kunal-Creates" target="_blank" class="nav-link">🖥️ GitHub</a>
+                <a href="https://www.linkedin.com/in/kunal-creates/" target="_blank" class="nav-link">🔗 LinkedIn</a>
+            </nav>
+
+            <section class="section">
+                <h2>Case Studies:</h2>
+                <p>Here are some highlighted projects for your reference:</p>
+                <div class="case-studies">
+                    <img src="Images/lance.jpg" alt="Architecture" class="case-study-img">
+                    <img src="Images/learn.jpg" alt="Forest House" class="case-study-img">
+                    <img src="Images/mouse.jpg" alt="Modern Building" class="case-study-img">
+                </div>
+            </section>
+
+            <section class="experiments">
+                <h2>Experiments</h2>
+                <p>Here are some illustrations which I have made while learning:</p>
+                <div class="experiments-grid">
+                    <a href="" target="_blank"><img src="Images/Landing Pages.png" alt="Abstract 1" class="experiment-img"></a>
+                    <a href="https://dribbble.com/shots/24881207-MoJo-Web-Technologies-Mobile-Version" target="_blank"><img src="Images/Mojo.png" alt="Abstract 2" class="experiment-img"></a>
+                    <a href="" target="_blank"><img src="Images/Net-Clan.png"  alt="Abstract 3" class="experiment-img"></a>
+                    <a href="https://dribbble.com/shots/24756309-AttainPay-Pay-via-Credit-Card" target="_blank"><img src="Images/Attain-Pay.png" alt="Abstract 4" class="experiment-img"></a>
+                </div>
+            </section>
+
+            <div class="contact">
+                <h2>Let's work together!</h2>
+                <a class="contact-button" href="mailto:designer.kunalsingh@gmail.com">
+                    mail me
+                </a>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <a href="about.html" style="text-decoration: none; color: #ffffff;">
+                <div class="section">
+                    <div class="profile">
+                        <img src="Images/me.png" alt="Profile" class="profile-img">
+                        <div class="profile-info">
+                            <h1>Kunal Singh</h1>
+                            <h5 style="color: #ffffff; font-size: 12px; font-weight: 100;">UI/UX Designer | Developer</h5>
+                            <p style="margin-top: 1rem;">Design enthusiast with a passion for pixels—and an obsession with perfecting details.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </a>
+
+            <div class="section">
+                <h2>Experience</h2>
+                <p style="margin-top: 0.5rem; font-size: 14px;">Having a whole year of dedicated learning & Google's UI UX Certificate Program. Build up some amazing projects in the learning time.</p>
+            </div>
+
+            <div class="section">
+                <h2>Web Projects:</h2>
+                <p>Here are some illustrations which I have made while learning:</p>
+                <div class="web-project">
+                    <img src="Images/danger.jpg" alt="Web Project" class="case-study-img">
+                    <a href="#" class="project-link">Go to project →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
