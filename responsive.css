@@ -76,21 +76,27 @@
     }
 
     .case-studies {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
     }
 
     .case-study-img {
         height: 250px;
+        width: 100%;
     }
 
     .experiments-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
     }
 
     .experiment-img {
         height: 200px;
+        width: 100%;
     }
 
     .top-section {
@@ -128,6 +134,7 @@
     .contact {
         flex-direction: column;
         height: auto;
+        min-height: 120px;
         gap: 1rem;
         padding: 1.5rem;
         align-items: center;
